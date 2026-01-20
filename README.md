@@ -8,6 +8,8 @@ A simplified alternative to Auto-Claude, designed for developers who prefer:
 - ✅ **Spec-driven development** - Every task starts with a specification
 - ✅ **Self-validating QA** - Built-in quality assurance loop
 - ✅ **Memory persistence** - Context maintained across sessions
+- ✅ **Local Embeddings ** - Indexed Codebase, Sessions, Memories and Plans
+- ✅ **Intelligent Documentation Lookup  ** - Targeted Context7 Retrieval
 
 ---
 
@@ -280,6 +282,9 @@ python .branch-flow/scripts/bf-search.py config --set-model mxbai-embed-large
 - **Specs**: All task specifications
 - **Plans**: All implementation plans
 
+### Why local LLMs?
+Some of the code bases I work on are quite large and unruly whilst I appreciate existing tools may be better suited (the excellent 'Serena' MCP for example), I found that leaning too heavily on using MCPs for the heavy lifting took up too much of the context window. If something more targeted, specific and quickly accessible was availavle, then using a local LLM seems to be a perfect fit. Again, it may not be for everybody, but really helps for my specific work cases.
+
 ### Configuration
 
 Full embedding configuration in `.branch-flow/config.json`:
@@ -317,7 +322,7 @@ Full embedding configuration in `.branch-flow/config.json`:
 
 ## Documentation Research (Context7)
 
-Branch Flow integrates with Context7 MCP to fetch and summarize library documentation while keeping context lean.
+Branch Flow integrates with Context7 MCP to fetch and summarize library documentation while keeping context lean - therefore, (hopefully) not taking up too much of the context window, especially after it's been indexed. 
 
 ### Why?
 
