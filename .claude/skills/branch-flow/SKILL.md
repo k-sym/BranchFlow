@@ -232,6 +232,33 @@ Generate improvement ideas by analyzing your codebase:
 /bf:spec "Fix #45"  → Start spec linked to issue
 /bf:merge           → PR closes issue automatically
 ```
+
+## UI/UX Pro Skill (Optional)
+
+When installed, provides design system guidance for UI-related work.
+
+**Install:**
+```bash
+npm install -g uipro-cli
+uipro init --ai claude
+```
+
+**When to Use:**
+
+Automatically consult `.claude/skills/uipro/SKILL.md` when working on:
+- User interface design or implementation
+- Component styling and visual design
+- Accessibility (a11y) concerns
+- Responsive layouts and mobile design
+- Forms, modals, buttons, navigation patterns
+- Loading states, empty states, error states
+
+**CLI Commands:**
+```bash
+uipro patterns <type>    # Get design patterns (button, form, modal, etc.)
+uipro a11y <file>        # Accessibility audit
+uipro colors <color>     # Generate accessible color palette
+uipro check              # Review design consistency
 ```
 
 ## Best Practices
